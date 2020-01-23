@@ -20,11 +20,77 @@ img {
 	/*max-width: 85%;*/
 	margin: 0 auto;
 }
+
 .clearfix::after,
-section::after {
-	content: '';
+section::after,
+footer::after {
+	content:'';
 	display: block;
 	clear: both;
+}
+
+
+/* Column system */
+
+[class^=col-] {
+	width: 100%;
+	margin-top: 1em;
+}
+
+[class^=col-]:first-child {
+	margin-top: 0;
+}
+/*.col-3 {
+
+	margin-left: 1rem;
+}
+*/
+.col-1 {
+	width: 33.333334%;
+	float: left;
+}
+
+
+@media (min-width: 40rem){
+
+[class^=col-] {
+	float: left;
+	padding: 0 2em;
+	margin-top: 0;	
+}
+
+[class^=col-]:first-child {
+	padding-left: 5rem;
+}
+
+[class^=col-]:last-child {
+	padding-right: 0;
+}
+
+
+.col-3 {
+	width: 40%;
+	margin-left: 2rem;
+}
+.col-1 {
+	width: 16.6666%;
+
+}
+}
+
+@media (max-width: 400px) {
+
+	[class^=col-]{
+		display: block;
+		width: 100%;
+		text-align: center;
+	/*	padding: 0 2rem;
+		padding-right: 2rem;*/
+	}
+	.col-3 {
+		text-align: left;
+		padding: 2rem;
+	}
 }
 
 
@@ -56,9 +122,18 @@ p:last-of-type {
 	font-size: .9em;
 	margin-bottom: 3rem;
 }
+
 .title-cta {
-	
+	margin: 0 0 .5em;
 }
+
+.unstyled-list {
+	margin: 0;
+	padding: 0; 
+}
+
+
+
 @media (min-width: 60rem){
 	p{
 		font-size: 1.2rem;
@@ -104,13 +179,10 @@ p:last-of-type {
 .button-dark:hover,
 .button-dark:focus {
 	background: #232323;
-	color: #232323;
-	border-color: #00ff6c;
+	color: #00ff6c;
+	/*border-color: #00ff6c;*/
 
-
-
-
-
+}
 @media (min-width: 60rem) {
 	.button{
 		font-size: 1.5rem;
@@ -314,11 +386,43 @@ nav a:focus {
 	}
 }
 
-
-
 /* CTA */
 
-
 .cta {
-	background:;
+	background: #00ff6c;
+	padding: 3em 0;
 }
+
+
+/* FOOTER */
+
+footer {
+	background: #232323;
+	color: #fff;
+	text-align: left;
+	padding: 5em 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
